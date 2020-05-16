@@ -1,0 +1,6 @@
+framework module Pods_beatmachineswiftui {
+  umbrella header "Pods-beatmachineswiftui-umbrella.h"
+
+  export *
+  module * { export * }
+}

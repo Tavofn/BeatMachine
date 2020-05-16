@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87F74BD1C863807FD689B8AF /* Pods_beatmachineswiftui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F6E0CAC59B0D288FA58D1DB /* Pods_beatmachineswiftui.framework */; };
+		9C1A7CCA243B0CF300FA1ECB /* plotWaveform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A7CC9243B0CF300FA1ECB /* plotWaveform.swift */; };
+		9C1A7CCE243EB8B900FA1ECB /* sliderEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A7CCD243EB8B900FA1ECB /* sliderEdit.swift */; };
+		9C1A7CD2244207B800FA1ECB /* audioEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A7CD1244207B800FA1ECB /* audioEditor.swift */; };
+		9CECB097243A6CB70092D2FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECB096243A6CB70092D2FD /* AppDelegate.swift */; };
+		9CECB099243A6CB70092D2FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECB098243A6CB70092D2FD /* SceneDelegate.swift */; };
+		9CECB09B243A6CB70092D2FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECB09A243A6CB70092D2FD /* ContentView.swift */; };
+		9CECB09D243A6CB80092D2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CECB09C243A6CB80092D2FD /* Assets.xcassets */; };
+		9CECB0A0243A6CB80092D2FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CECB09F243A6CB80092D2FD /* Preview Assets.xcassets */; };
+		9CECB0A3243A6CB80092D2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CECB0A1243A6CB80092D2FD /* LaunchScreen.storyboard */; };
+		9CECB0AB243A94510092D2FD /* FilePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECB0AA243A94510092D2FD /* FilePickerController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6B74AA4BF8BBCFB7CA50AD15 /* Pods-beatmachineswiftui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beatmachineswiftui.release.xcconfig"; path = "Pods/Target Support Files/Pods-beatmachineswiftui/Pods-beatmachineswiftui.release.xcconfig"; sourceTree = "<group>"; };
+		9C1A7CC9243B0CF300FA1ECB /* plotWaveform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plotWaveform.swift; sourceTree = "<group>"; };
+		9C1A7CCD243EB8B900FA1ECB /* sliderEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sliderEdit.swift; sourceTree = "<group>"; };
+		9C1A7CD1244207B800FA1ECB /* audioEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = audioEditor.swift; sourceTree = "<group>"; };
+		9CECB093243A6CB70092D2FD /* beatmachineswiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beatmachineswiftui.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CECB096243A6CB70092D2FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CECB098243A6CB70092D2FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9CECB09A243A6CB70092D2FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9CECB09C243A6CB80092D2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CECB09F243A6CB80092D2FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9CECB0A2243A6CB80092D2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CECB0A4243A6CB80092D2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CECB0AA243A94510092D2FD /* FilePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerController.swift; sourceTree = "<group>"; };
+		9F6E0CAC59B0D288FA58D1DB /* Pods_beatmachineswiftui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beatmachineswiftui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEDECEFDE4CAD643DC576283 /* Pods-beatmachineswiftui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beatmachineswiftui.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beatmachineswiftui/Pods-beatmachineswiftui.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CECB090243A6CB70092D2FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F74BD1C863807FD689B8AF /* Pods_beatmachineswiftui.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F87ACE612F9EEC950369ACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F6E0CAC59B0D288FA58D1DB /* Pods_beatmachineswiftui.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CECB08A243A6CB70092D2FD = {
+			isa = PBXGroup;
+			children = (
+				9CECB095243A6CB70092D2FD /* beatmachineswiftui */,
+				9CECB094243A6CB70092D2FD /* Products */,
+				B630649AB7DC13740F7C1C11 /* Pods */,
+				4F87ACE612F9EEC950369ACA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9CECB094243A6CB70092D2FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CECB093243A6CB70092D2FD /* beatmachineswiftui.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CECB095243A6CB70092D2FD /* beatmachineswiftui */ = {
+			isa = PBXGroup;
+			children = (
+				9CECB096243A6CB70092D2FD /* AppDelegate.swift */,
+				9CECB098243A6CB70092D2FD /* SceneDelegate.swift */,
+				9CECB09A243A6CB70092D2FD /* ContentView.swift */,
+				9CECB0AA243A94510092D2FD /* FilePickerController.swift */,
+				9C1A7CD1244207B800FA1ECB /* audioEditor.swift */,
+				9C1A7CCD243EB8B900FA1ECB /* sliderEdit.swift */,
+				9C1A7CC9243B0CF300FA1ECB /* plotWaveform.swift */,
+				9CECB09C243A6CB80092D2FD /* Assets.xcassets */,
+				9CECB0A1243A6CB80092D2FD /* LaunchScreen.storyboard */,
+				9CECB0A4243A6CB80092D2FD /* Info.plist */,
+				9CECB09E243A6CB80092D2FD /* Preview Content */,
+			);
+			path = beatmachineswiftui;
+			sourceTree = "<group>";
+		};
+		9CECB09E243A6CB80092D2FD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9CECB09F243A6CB80092D2FD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B630649AB7DC13740F7C1C11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEDECEFDE4CAD643DC576283 /* Pods-beatmachineswiftui.debug.xcconfig */,
+				6B74AA4BF8BBCFB7CA50AD15 /* Pods-beatmachineswiftui.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CECB092243A6CB70092D2FD /* beatmachineswiftui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CECB0A7243A6CB80092D2FD /* Build configuration list for PBXNativeTarget "beatmachineswiftui" */;
+			buildPhases = (
+				14175A1ED1D0F4785C8545C5 /* [CP] Check Pods Manifest.lock */,
+				9CECB08F243A6CB70092D2FD /* Sources */,
+				9CECB090243A6CB70092D2FD /* Frameworks */,
+				9CECB091243A6CB70092D2FD /* Resources */,
+				CE06386E7C460056E8CC7D79 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = beatmachineswiftui;
+			productName = beatmachineswiftui;
+			productReference = 9CECB093243A6CB70092D2FD /* beatmachineswiftui.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CECB08B243A6CB70092D2FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Tavo;
+				TargetAttributes = {
+					9CECB092243A6CB70092D2FD = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 9CECB08E243A6CB70092D2FD /* Build configuration list for PBXProject "beatmachineswiftui" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CECB08A243A6CB70092D2FD;
+			productRefGroup = 9CECB094243A6CB70092D2FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CECB092243A6CB70092D2FD /* beatmachineswiftui */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CECB091243A6CB70092D2FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CECB0A3243A6CB80092D2FD /* LaunchScreen.storyboard in Resources */,
+				9CECB0A0243A6CB80092D2FD /* Preview Assets.xcassets in Resources */,
+				9CECB09D243A6CB80092D2FD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14175A1ED1D0F4785C8545C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-beatmachineswiftui-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE06386E7C460056E8CC7D79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beatmachineswiftui/Pods-beatmachineswiftui-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beatmachineswiftui/Pods-beatmachineswiftui-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-beatmachineswiftui/Pods-beatmachineswiftui-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CECB08F243A6CB70092D2FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CECB097243A6CB70092D2FD /* AppDelegate.swift in Sources */,
+				9CECB0AB243A94510092D2FD /* FilePickerController.swift in Sources */,
+				9C1A7CCA243B0CF300FA1ECB /* plotWaveform.swift in Sources */,
+				9CECB099243A6CB70092D2FD /* SceneDelegate.swift in Sources */,
+				9CECB09B243A6CB70092D2FD /* ContentView.swift in Sources */,
+				9C1A7CD2244207B800FA1ECB /* audioEditor.swift in Sources */,
+				9C1A7CCE243EB8B900FA1ECB /* sliderEdit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9CECB0A1243A6CB80092D2FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CECB0A2243A6CB80092D2FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CECB0A5243A6CB80092D2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CECB0A6243A6CB80092D2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CECB0A8243A6CB80092D2FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEDECEFDE4CAD643DC576283 /* Pods-beatmachineswiftui.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"beatmachineswiftui/Preview Content\"";
+				DEVELOPMENT_TEAM = MCEQ9LL66D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = beatmachineswiftui/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tavo.beatmachineswiftui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CECB0A9243A6CB80092D2FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B74AA4BF8BBCFB7CA50AD15 /* Pods-beatmachineswiftui.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"beatmachineswiftui/Preview Content\"";
+				DEVELOPMENT_TEAM = MCEQ9LL66D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = beatmachineswiftui/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tavo.beatmachineswiftui;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CECB08E243A6CB70092D2FD /* Build configuration list for PBXProject "beatmachineswiftui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CECB0A5243A6CB80092D2FD /* Debug */,
+				9CECB0A6243A6CB80092D2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CECB0A7243A6CB80092D2FD /* Build configuration list for PBXNativeTarget "beatmachineswiftui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CECB0A8243A6CB80092D2FD /* Debug */,
+				9CECB0A9243A6CB80092D2FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CECB08B243A6CB70092D2FD /* Project object */;
+}
