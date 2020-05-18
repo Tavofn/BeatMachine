@@ -10,21 +10,22 @@ import SwiftUI
 import AudioKit
 struct ContentView: View {
   
-   @State private var showDocumentPicker = false
-   @State private var showAudioEditor = false
    @State var padfiles:[AKAudioFile] = try! [AKAudioFile](repeating: AKAudioFile(), count: 12)
    @State var padplayers:[AKPlayer] = [AKPlayer](repeating: AKPlayer(), count: 12)
    @State var audiourls:[URL] = [URL](repeating: URL(fileURLWithPath: ""), count: 12)
    @State var selectedaudiourl:URL = URL(fileURLWithPath: "")
    @State var selectPadBool:[Bool] = [Bool](repeating: false, count: 12)
    @State private var modes = 1
+   @State var starttime:[Double] = [Double](repeating: 0, count: 9)
+   @State var endtime:[Double] = [Double](repeating: 0, count: 9)
+   @State var currentPad:Int = 0
+    //mode 0 = change audio
+    //mode 1 = play audio
+    //mode 2 = edit audio
    @State var modeImage:String = "neutral"
    @State private var showModes = false
    @State private var currentezfile:EZAudioFile!
-   @State private var currentakfile:AKAudioFile!
    @State private var currentakplayer:AKPlayer!
-   @State private var currentakplayerNUM:Int = 0
-   @State private var padplaytoEdit:AKPlayer!
     
     var body: some View {
         ZStack{
@@ -71,11 +72,31 @@ struct ContentView: View {
                            
                            
                            Button(action: {
-                             //self.showDocumentPicker = true
                             self.modes = self.modes + 1
-                            self.padInit()
-                            if(self.modes == 2) //PLAYMODE
+                            
+                            if(self.modes == 1) //CHANGE AUDIO MODE
                             {
+                                if(AudioKit.engine.isRunning)
+                                     {
+                                        for x in 0...self.selectPadBool.count-1
+                                           {
+                                            if(self.padplayers[x].duration > 0)
+                                         {
+                                            self.padplayers[x].stop()
+                                         }
+                                     }
+                                        
+                                         try! AudioKit.stop()
+                                         print("stopped the engine for CHANGE mode")
+                                     }
+                                      self.modeImage = "neutral"
+                                      print("switched change audio")
+                                 print(self.modes)
+                               
+                            }
+                            else if(self.modes == 2) //PLAYMODE
+                            {
+                                self.padInit()
                                 self.modeImage = "playmodebutton"
                          
                                       
@@ -99,27 +120,8 @@ struct ContentView: View {
                                 self.modes = 0
                                  print(self.modes)
                                 
-                            } else if(self.modes == 1) //CHANGE AUDIO MODE
-                            {
-                                if(AudioKit.engine.isRunning)
-                                     {
-                                        for x in 0...self.selectPadBool.count-1
-                                           {
-                                            if(self.padplayers[x].duration > 0)
-                                         {
-                                            self.padplayers[x].stop()
-                                         }
-                                     }
-                                        
-                                         try! AudioKit.stop()
-                                         print("stopped the engine for CHANGE mode")
-                                     }
-                                      self.modeImage = "neutral"
-                                      print("switched change audio")
-                                 print(self.modes)
-                               
                             }
-                            
+                           
                               
                            }){
                                Image(modeImage).resizable().frame(width:50,height:50)
@@ -191,11 +193,15 @@ struct ContentView: View {
                    }.sheet(isPresented: $showModes,  content: {
                        if self.modes == 1
                        {
+                            
                         self.filepickerreturn()
+                        
                      
                        } else if self.modes == 0 {
-                           
-                        self.audioeditorreturn()
+                    
+                             self.audioeditorreturn()
+                        
+                            
                        }
                    })
         }
@@ -205,89 +211,77 @@ struct ContentView: View {
         
         }
     }
-    func padActions(_ num:Int) //when pads are pressed
+    func padActions(_ padnum:Int) //when pads are pressed
  {
-    if(modes == 2) //play
+   if(modes == 1) //change audio
     {
+       
         for x in 0...8
         {
-            if(x==num)
-            {
-            padplayers[x].play()
-                print("pressed duration:\(padplayers[x].duration)")
-            }
+         
+            selectPadBool[x] = false   //Resets pad selects
         }
-        
-     
+         
+            selectPadBool[padnum] = true
+          
+            print(selectPadBool)
     
-    }else if(modes == 0) //edit the file
-    {
-        for x in 0...8
-        {
-            if(x==num)
-            {
-                padplaytoEdit = padplayers[x]
-                currentezfile = EZAudioFile(url: audiourls[x])
-                currentakfile = try! AKAudioFile(forReading: audiourls[x])
-                currentakplayer = padplayers[x]
-                currentakplayerNUM = num
+          
                 
-            }
-        }
-         self.showModes = true
+       
+        self.showModes = true
         print("editmode pad")
        
         
-    }else if(modes == 1) //change the file
+    }else if(modes == 2) //play
     {
-        for x in 0...8
-        {
-            if(selectPadBool[x])
-            {
-                selectPadBool[x] = false
-            }
+        self.showModes = false
+        padplayers[padnum].play()
+        print("WE ARE IN")
+        
             
-            if(x == num)
-            {
-                selectPadBool[x] = true
-          
-                print(selectPadBool)
-            }
 
         }
-        
-          
+    else if(modes == 0) //edit audio
+       {
+        if(padplayers[padnum].duration != 0)
+        {
+          currentezfile = EZAudioFile(url: audiourls[padnum])
+          currentakplayer = padplayers[padnum]
           self.showModes = true
-       
-   
- 
+            
+       }else
+        {
+             self.showModes = false
+        }
         
-        print("documentmode pad")
-         self.showModes = true
-     
+      currentPad = padnum
+       
     }
- }
-
+ 
+    }
     func filepickerreturn() -> FilePickerController
     {
         for x in 0...8
         {
             if(selectPadBool[x])
             {
-             print("THE FILE WAS ABLE TO BE TRANSFERED TO AUDIOURL[X]")
+     
                 
                 return FilePickerController(urlaudio: $audiourls[x])
                
                 
             }
         }
+        print("on file")
         return FilePickerController(urlaudio:  $audiourls[6])
         
     }
     func audioeditorreturn() -> audioEditor
     {
-        print("audioedit returned....or not")
-        return audioEditor(ezfile: $currentezfile, padplay: $currentakplayer)
+        return audioEditor(ezfile: $currentezfile, padplay: $currentakplayer, starttime: $starttime[currentPad] ,endtime: $endtime[currentPad])
+        
+       
     }
     
     
@@ -296,12 +290,9 @@ struct ContentView: View {
     
     
     
-    func padInit() //used when top right action button is pressed
+    func padInit() //PLAY MODE INITIALIZATION
     {
-        if(self.modes == 2)
-        {
-            
-            
+       
             do
             {
                 for x in 0...8
@@ -315,11 +306,19 @@ struct ContentView: View {
             }
             
             
-            for x in 0...self.selectPadBool.count-1
+            for x in 0...8
             {
                 self.padplayers[x] = AKPlayer(audioFile: self.padfiles[x])
                 self.padplayers[x].buffering = .always
+    
                 print(self.padplayers[x].duration)
+                
+                if(endtime[x] != 0)
+                {
+                    self.padplayers[x].startTime = starttime[x]
+                    self.padplayers[x].endTime = endtime[x]
+                    print("active on \(x)")
+                }
                 
             }
             AudioKit.output = AKMixer(self.padplayers)
@@ -332,7 +331,7 @@ struct ContentView: View {
         }
         
             
-        }
+        
       
     }
     

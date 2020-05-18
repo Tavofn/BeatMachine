@@ -15,7 +15,7 @@ struct sliderEdit: UIViewRepresentable {
     @Binding var selectMin:CGFloat
      @Binding var selectMax:CGFloat
     func makeUIView(context: Context) -> RangeSeekSlider {
-        print("DURATION IN SLIDEREDIT: \(padplay.duration)")
+  
             return RangeSeekSlider()
         
      

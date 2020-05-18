@@ -13,7 +13,8 @@ import RangeSeekSlider
 struct audioEditor: View {
     @Binding var ezfile:EZAudioFile!
     @Binding var padplay:AKPlayer!
-   
+    @Binding var starttime:Double
+    @Binding var endtime:Double
     @State var applesliderValuestart:Double = 0 //apple slider
     @State var applesliderValueend:Double = 0 //apple slider
     @State var rangeselectstart:CGFloat = 0 //range slider
@@ -51,6 +52,7 @@ struct audioEditor: View {
                                             
                                          self.rangeselectstart = CGFloat(self.applesliderValuestart * self.padplay.duration)
                                             self.padplay.startTime = self.applesliderValuestart * self.padplay.duration
+                                            self.starttime = self.applesliderValuestart * self.padplay.duration
                                          
                                             
                                          
@@ -67,6 +69,7 @@ struct audioEditor: View {
                                 self.applesliderValueend = newVal
                                 self.rangeselectend = CGFloat(self.padplay.duration-self.applesliderValueend*self.padplay.duration)
                                 self.padplay.endTime = self.padplay.duration-self.applesliderValueend*self.padplay.duration
+                                self.endtime = self.padplay.duration-self.applesliderValueend*self.padplay.duration
                                
                               
                         })).frame(width: 200, height: 150.0)
